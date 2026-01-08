@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Editor Portfolio | Visual Storyteller</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --accent: #D4AF37; /* Màu vàng Gold sang trọng */
+        }
+        body {
+            background-color: #050505;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .font-heading { font-family: 'Syncopate', sans-serif; }
+        
+        .gold-border { border: 1px solid var(--accent); }
+        .text-gold { color: var(--accent); }
+        .bg-gold { background-color: var(--accent); }
+
+        /* Hiệu ứng hover cho các ô dự án */
+        .project-card {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        .project-card:hover {
+            transform: scale(0.98);
+        }
+        .project-card img {
+            transition: transform 0.7s ease;
+        }
+        .project-card:hover img {
+            transform: scale(1.1);
+            filter: grayscale(0.5);
+        }
+
+        /* Tinh chỉnh scrollbar */
+        ::-webkit-scrollbar { width: 5px; }
+        ::-webkit-scrollbar-track { background: #050505; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }
+    </style>
+</head>
+<body>
+
+    <nav class="fixed w-full z-50 px-6 py-4 flex justify-between items-center bg-black/50 backdrop-blur-md border-b border-white/10">
+        <div class="font-heading text-xl tracking-tighter">DUONG<span class="text-gold">FILMS</span></div>
+        <div class="hidden md:flex space-x-10 text-[10px] uppercase tracking-[0.3em] font-light">
+            <a href="#" class="hover:text-gold transition">Work</a>
+            <a href="#about" class="hover:text-gold transition">About</a>
+            <a href="#contact" class="hover:text-gold transition">Contact</a>
+        </div>
+        <button class="md:hidden text-white">Menu</button>
+    </nav>
+
+    <header class="relative h-screen flex flex-col justify-center items-center text-center px-4 overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]"></div>
+        
+        <div class="z-10">
+            <h2 class="text-gold font-heading text-xs md:text-sm tracking-[0.5em] mb-6 animate-pulse">CREATIVE VIDEO EDITOR</h2>
+            <h1 class="font-heading text-4xl md:text-7xl lg:text-8xl leading-none mb-8 tracking-tighter">
+                VISUAL <br> STORYTELLER
+            </h1>
+            <p class="max-w-xl mx-auto text-gray-400 font-light text-sm md:text-base leading-relaxed mb-10">
+                Chỉnh sửa video không chỉ là cắt ghép. Đó là nghệ thuật điều phối cảm xúc thông qua từng khung hình và nhịp điệu âm thanh.
+            </p>
+            <a href="#work" class="inline-block px-10 py-4 border border-white text-[10px] tracking-[0.4em] uppercase hover:bg-white hover:text-black transition-all duration-500">
+                Khám phá dự án
+            </a>
+        </div>
+    </header>
+
+    <section id="work" class="py-20 px-6 max-w-[1400px] mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+            <h3 class="font-heading text-3xl tracking-tighter italic text-white/90">SELECTED WORKS</h3>
+            <p class="text-gray-500 text-xs tracking-widest uppercase">2022 — 2024</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-4">
+            <div class="md:col-span-8 project-card bg-zinc-900 aspect-video md:aspect-auto h-[400px]">
+                <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=1200&q=80" class="w-full h-full object-cover opacity-60">
+                <div class="absolute inset-0 p-10 flex flex-col justify-end">
+                    <span class="text-gold text-[10px] tracking-[0.3em] uppercase mb-2">Cinematic Film</span>
+                    <h4 class="font-heading text-2xl">URBAN EXPLORATION</h4>
+                </div>
+            </div>
+
+            <div class="md:col-span-4 project-card bg-zinc-900 h-[400px]">
+                <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover opacity-60">
+                <div class="absolute inset-0 p-10 flex flex-col justify-end">
+                    <span class="text-gold text-[10px] tracking-[0.3em] uppercase mb-2">Fashion Video</span>
+                    <h4 class="font-heading text-2xl">VOGUE X SEOUL</h4>
+                </div>
+            </div>
+
+            <div class="md:col-span-4 project-card bg-zinc-900 aspect-square">
+                <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover opacity-60">
+                <div class="absolute inset-0 p-8 flex flex-col justify-end">
+                    <span class="text-gold text-[10px] tracking-[0.3em] uppercase mb-2">Commercial</span>
+                    <h4 class="font-heading text-xl">APPLE AD - RE-EDIT</h4>
+                </div>
+            </div>
+
+            <div class="md:col-span-8 project-card bg-zinc-900 aspect-video md:aspect-auto">
+                <img src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&w=1200&q=80" class="w-full h-full object-cover opacity-60">
+                <div class="absolute inset-0 p-10 flex flex-col justify-end">
+                    <span class="text-gold text-[10px] tracking-[0.3em] uppercase mb-2">Music Video</span>
+                    <h4 class="font-heading text-2xl">LOST IN LIGHTS</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-32 px-6 bg-[#0a0a0a]">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+            <div class="gold-border p-2">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80" alt="Profile" class="grayscale hover:grayscale-0 transition duration-1000">
+            </div>
+            <div>
+                <h3 class="font-heading text-4xl mb-8 leading-tight">CHỈNH CHU TRONG <br> TỪNG FRAME HÌNH</h3>
+                <p class="text-gray-400 font-light leading-relaxed mb-8">
+                    Tôi là một Video Editor chuyên nghiệp với hơn 5 năm kinh nghiệm làm việc trong lĩnh vực quảng cáo và phim ngắn. Sự tỉ mỉ trong việc chọn tone màu và nhịp điệu cắt dựng là thứ giúp tôi tạo nên sự khác biệt.
+                </p>
+                <div class="grid grid-cols-2 gap-4 text-[10px] uppercase tracking-widest text-white/70">
+                    <div class="flex items-center space-x-2">
+                        <span class="w-2 h-2 bg-gold"></span>
+                        <span>Adobe Premiere Pro</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <span class="w-2 h-2 bg-gold"></span>
+                        <span>After Effects</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <span class="w-2 h-2 bg-gold"></span>
+                        <span>DaVinci Resolve</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <span class="w-2 h-2 bg-gold"></span>
+                        <span>Final Cut Pro</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="py-20 px-6 border-t border-white/5 text-center">
+        <h2 class="font-heading text-2xl md:text-5xl mb-12 tracking-tighter">BẮT ĐẦU DỰ ÁN CỦA BẠN?</h2>
+        <a href="mailto:contact@duongfilms.com" class="text-gold text-lg md:text-3xl font-light hover:opacity-70 transition underline underline-offset-8">
+            hello@duongfilms.com
+        </a>
+        <div class="mt-20 flex justify-center space-x-8 text-[10px] uppercase tracking-[0.2em] text-gray-500">
+            <a href="#" class="hover:text-white transition">Instagram</a>
+            <a href="#" class="hover:text-white transition">Behance</a>
+            <a href="#" class="hover:text-white transition">Vimeo</a>
+        </div>
+        <p class="mt-10 text-[8px] text-gray-700 tracking-[0.5em]">© 2024 DUONG FILMS. ALL RIGHTS RESERVED.</p>
+    </footer>
+
+</body>
+</html>
